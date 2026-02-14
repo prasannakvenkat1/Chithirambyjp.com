@@ -47,11 +47,11 @@ export const courses = [
     shortDescription:
       "Fun and creative art programs designed specifically for children, fostering imagination and skill development.",
     description:
-      "Art Trail is our specially designed children's art program that nurtures creativity, builds confidence, and develops fine motor skills through fun, age-appropriate art activities. Classes are grouped by age to ensure the best learning experience.",
+      "Art Trail is our specially designed children's art program that nurtures creativity, builds confidence, and develops fine motor skills through fun, age-appropriate art activities.",
     image: "/images/courses/art-trail.jpg",
     duration: "Ongoing (monthly enrollment)",
-    levels: ["Ages 4-6", "Ages 7-9", "Ages 10-12"],
-    ageGroup: "4-12",
+    levels: [],
+    ageGroup: "",
     curriculum: [
       "Drawing & Coloring Fun",
       "Paper Crafts & Origami",

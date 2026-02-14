@@ -50,9 +50,11 @@ export default function CoursesPage() {
                     {course.description}
                   </p>
                   <div className="flex flex-wrap gap-2 mb-8">
-                    <span className="px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full">
-                      Ages: {course.ageGroup}
-                    </span>
+                    {course.ageGroup && (
+                      <span className="px-4 py-1.5 bg-primary/10 text-primary text-sm font-medium rounded-full">
+                        Ages: {course.ageGroup}
+                      </span>
+                    )}
                     <span className="px-4 py-1.5 bg-secondary/10 text-secondary text-sm font-medium rounded-full">
                       {course.duration}
                     </span>

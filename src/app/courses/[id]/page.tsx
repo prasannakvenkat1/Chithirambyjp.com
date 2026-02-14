@@ -93,12 +93,15 @@ export default async function CourseDetailPage({
                       {course.duration}
                     </dd>
                   </div>
-                  <div>
-                    <dt className="text-xs text-gray-500 font-medium uppercase tracking-wide">Age Group</dt>
-                    <dd className="text-dark font-semibold mt-1">
-                      {course.ageGroup} years
-                    </dd>
-                  </div>
+                  {course.ageGroup && (
+                    <div>
+                      <dt className="text-xs text-gray-500 font-medium uppercase tracking-wide">Age Group</dt>
+                      <dd className="text-dark font-semibold mt-1">
+                        {course.ageGroup} years
+                      </dd>
+                    </div>
+                  )}
+                  {course.levels.length > 0 && (
                   <div>
                     <dt className="text-xs text-gray-500 font-medium uppercase tracking-wide">Levels</dt>
                     <dd className="flex flex-wrap gap-2 mt-2">
@@ -112,6 +115,7 @@ export default async function CourseDetailPage({
                       ))}
                     </dd>
                   </div>
+                  )}
                 </dl>
 
                 <div className="mt-7 space-y-3">
