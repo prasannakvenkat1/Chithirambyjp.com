@@ -66,19 +66,25 @@ export default function AboutPage() {
             />
             <div>
               <h2 className="text-3xl font-heading font-bold text-primary mb-6">
-                Our Founder
+                JP - JayaPriya
               </h2>
-              <h3 className="text-xl font-heading font-semibold text-secondary mb-4">
-                JP
-              </h3>
               <p className="text-gray-600 leading-relaxed mb-4">
-                {faculty[0]?.bio}
+                With over 15 years of experience in arts and art education, JP
+                founded Chithiram by JP to make quality art education accessible
+                to all with the intent to pass on the knowledge she accumulated
+                from various artists and gurus. An engineer by education, artist
+                by choice and passion, having worked in art education with
+                various partners and learning over a long span.
+              </p>
+              <p className="text-gray-600 leading-relaxed mb-4">
+                JP&apos;s passion for teaching and commitment to making art
+                education accessible drives every aspect of Chithiram Art School
+                by JP.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                JP&apos;s passion for teaching and commitment to making art
-                education accessible drives every aspect of {siteConfig.name}.
-                Under JP&apos;s leadership, the school has grown into a
-                thriving community of artists and art lovers.
+                JP over the years has felt art as a therapy to overcome
+                shortcomings. As a strong believer in alternative medicine and a
+                practitioner, she strongly believes art can set minds free.
               </p>
             </div>
           </div>
