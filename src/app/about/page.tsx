@@ -32,18 +32,17 @@ export default function AboutPage() {
                 About {siteConfig.name}
               </h2>
               <p className="text-gray-600 leading-relaxed mb-4">
-                {siteConfig.name} is a premier art school in Chennai dedicated
+                Chithiram Art School by JP is an art school in Chennai dedicated
                 to nurturing artistic talent across all ages. Founded with the
-                belief that art is a fundamental form of human expression, we
-                provide a supportive and inspiring environment where creativity
-                flourishes.
+                belief that art can transcend human expression across, we strive
+                to provide a supportive and inspiring environment where
+                creativity flourishes.
               </p>
               <p className="text-gray-600 leading-relaxed mb-4">
                 Our carefully designed curriculum spans from foundational
-                drawing and sketching to advanced fine arts, sculpting, Tanjore
-                painting, and more. Whether you&apos;re a beginner discovering
-                your creative side or an experienced artist looking to refine
-                your skills, we have a program for you.
+                drawing and sketching to advanced and more. Whether you&apos;re
+                a beginner discovering your creative side or an experienced
+                artist looking to refine your skills, we have a program for you.
               </p>
               <p className="text-gray-600 leading-relaxed">
                 We take pride in our small class sizes, personalized attention,
