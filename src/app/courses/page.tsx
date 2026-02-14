@@ -3,9 +3,9 @@ import { courses, siteConfig } from "@/data/content";
 import PlaceholderImage from "@/components/PlaceholderImage";
 
 export const metadata = {
-  title: "Courses | Chithiram Art School by JP",
+  title: "Art Courses in Akkarai, ECR Chennai | Chithiram Art School by JP",
   description:
-    "Explore our range of art courses — Art Trail for kids, Storytelling, and Terracotta Jewelry.",
+    "Art Trail for kids (ages 4-12) and Storytelling classes near Shollinganallur, ECR, Neelangarai, Pallavakkam & Uthandi. Drawing, painting & more. Free trial class!",
 };
 
 export default function CoursesPage() {

@@ -3,9 +3,9 @@ import { projects, siteConfig } from "@/data/content";
 import PlaceholderImage from "@/components/PlaceholderImage";
 
 export const metadata = {
-  title: "Projects | Chithiram Art School by JP",
+  title: "Tanjore Art Projects & Custom Orders | Chithiram Art School, Chennai",
   description:
-    "Explore our art projects including Tanjore paintings and custom commissions.",
+    "Tanjore painting projects and custom art commissions in Chennai. Traditional and contemporary Tanjore art by Chithiram Art School, Akkarai, ECR.",
 };
 
 export default function ProjectsPage() {

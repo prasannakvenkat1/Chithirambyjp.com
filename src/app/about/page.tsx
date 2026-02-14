@@ -4,9 +4,9 @@ import { faculty, siteConfig } from "@/data/content";
 import PlaceholderImage from "@/components/PlaceholderImage";
 
 export const metadata = {
-  title: "About Us | Chithiram Art School by JP",
+  title: "About Us | Chithiram Art School by JP - Akkarai, ECR, Chennai",
   description:
-    "Learn about Chithiram Art School, our founder JP, our vision, and our experienced faculty.",
+    "Learn about Chithiram Art School in Akkarai, Chennai. Founded by JP - JayaPriya with 15+ years in art education. Serving Shollinganallur, ECR, Neelangarai, Pallavakkam & Uthandi.",
 };
 
 export default function AboutPage() {
