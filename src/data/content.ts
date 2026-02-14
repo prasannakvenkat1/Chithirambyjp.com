@@ -6,7 +6,8 @@ export const siteConfig = {
   phone: "+91 75500 03723",
   email: "chithirambyjp@gmail.com",
   whatsapp: "917550003723",
-  address: "Chennai, Tamil Nadu, India",
+  address: "14, Lilly Pond Street, Akkarai, Chennai 600119",
+  mapUrl: "https://www.google.com/maps/search/?api=1&query=14+Lilly+Pond+Street+Akkarai+Chennai+600119",
   socialLinks: {
     facebook: "https://facebook.com/chithirambyjp",
     instagram: "https://instagram.com/chithirambyjp",
