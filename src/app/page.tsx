@@ -12,7 +12,7 @@ export default function Home() {
       <WelcomeSection />
       <FeaturedCourses />
       <GalleryPreview />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <CTASection />
     </>
   );
