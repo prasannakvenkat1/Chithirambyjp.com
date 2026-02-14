@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { heroBanners, courses, galleryItems, testimonials, siteConfig } from "@/data/content";
+import Image from "next/image";
+import { heroBanners, courses, galleryItems, siteConfig } from "@/data/content";
 import PlaceholderImage from "@/components/PlaceholderImage";
 
 export default function Home() {
@@ -12,7 +13,6 @@ export default function Home() {
       <WelcomeSection />
       <FeaturedCourses />
       <GalleryPreview />
-      {/* <TestimonialsSection /> */}
       <CTASection />
     </>
   );
@@ -31,47 +31,55 @@ function HeroSection() {
   const banner = heroBanners[current];
 
   return (
-    <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+    <section className="relative h-[80vh] min-h-[550px] overflow-hidden bg-primary-dark">
+      {/* Background */}
       <div className="absolute inset-0">
         <PlaceholderImage
           text=""
+          aspect="hero"
           className="!rounded-none h-full !aspect-auto"
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-r from-dark/70 to-dark/30" />
+      <div className="absolute inset-0 hero-overlay" />
+
+      {/* Content */}
       <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-        <div className="max-w-xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mb-4 leading-tight">
+        <div className="max-w-2xl">
+          <div className="w-16 h-1 bg-secondary mb-6 rounded-full" />
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 leading-[1.15]">
             {banner.title}
           </h1>
-          <p className="text-lg sm:text-xl text-white/90 mb-8">
+          <p className="text-lg sm:text-xl text-white/85 mb-10 leading-relaxed max-w-lg">
             {banner.subtitle}
           </p>
           <div className="flex gap-4 flex-wrap">
             <Link
               href={banner.cta.href}
-              className="px-8 py-3 bg-accent text-dark font-semibold rounded-md hover:bg-accent-light transition-colors text-lg"
+              className="px-8 py-3.5 bg-secondary text-white font-semibold rounded-lg hover:bg-secondary-light transition-colors text-base shadow-lg shadow-secondary/25"
             >
               {banner.cta.text}
             </Link>
             <Link
               href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent("Hi, I'd like to book a free trial class!")}`}
               target="_blank"
-              className="px-8 py-3 border-2 border-white text-white font-semibold rounded-md hover:bg-white hover:text-dark transition-colors text-lg"
+              className="px-8 py-3.5 border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white hover:text-primary-dark transition-colors text-base backdrop-blur-sm"
             >
               Free Trial Class
             </Link>
           </div>
         </div>
       </div>
-      {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2">
+
+      {/* Slide indicators */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
         {heroBanners.map((_, i) => (
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-3 h-3 rounded-full transition-all ${
-              i === current ? "bg-accent w-8" : "bg-white/50 hover:bg-white/80"
+            className={`h-2 rounded-full transition-all duration-300 ${
+              i === current
+                ? "bg-secondary w-8"
+                : "bg-white/40 w-2 hover:bg-white/60"
             }`}
             aria-label={`Go to slide ${i + 1}`}
           />
@@ -83,27 +91,51 @@ function HeroSection() {
 
 function WelcomeSection() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl sm:text-4xl font-heading font-bold text-primary mb-6">
-            Welcome to {siteConfig.name}
-          </h2>
-          <p className="text-lg text-gray-600 leading-relaxed mb-8">
-            {siteConfig.description} We believe that every individual has an
-            innate creative potential waiting to be unlocked. Our experienced
-            faculty and thoughtfully designed curriculum provide the perfect
-            environment for artistic growth.
-          </p>
-          <Link
-            href="/about"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors"
-          >
-            Learn More About Us
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-            </svg>
-          </Link>
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Image side */}
+          <div className="relative">
+            <div className="rounded-2xl overflow-hidden shadow-xl">
+              <Image
+                src="/images/founder.jpeg"
+                alt="Founder JP at Chithiram Art School"
+                width={600}
+                height={450}
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary/10 rounded-2xl -z-10" />
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-primary/10 rounded-2xl -z-10" />
+          </div>
+
+          {/* Text side */}
+          <div>
+            <div className="w-12 h-1 bg-secondary mb-6 rounded-full" />
+            <h2 className="text-3xl sm:text-4xl font-heading font-bold text-primary mb-6 leading-tight">
+              Welcome to {siteConfig.name}
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              {siteConfig.description} We believe that every individual has an
+              innate creative potential waiting to be unlocked. Our experienced
+              faculty and thoughtfully designed curriculum provide the perfect
+              environment for artistic growth.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-8">
+              From young children discovering the joy of colors to adults
+              mastering fine art techniques, Chithiram offers a nurturing space
+              where creativity flourishes.
+            </p>
+            <Link
+              href="/about"
+              className="link-underline text-primary font-semibold hover:text-primary-dark transition-colors inline-flex items-center gap-2"
+            >
+              Learn More About Us
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
@@ -111,54 +143,62 @@ function WelcomeSection() {
 }
 
 function FeaturedCourses() {
-  const featured = courses.slice(0, 4);
-
   return (
-    <section className="py-20 bg-cream">
+    <section className="py-24 bg-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
+          <div className="section-divider" />
           <h2 className="text-3xl sm:text-4xl font-heading font-bold text-primary mb-4">
             Our Courses
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Explore our range of art courses designed for all ages and skill
-            levels
+            Explore our range of art courses designed for all ages and skill levels
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {featured.map((course) => (
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {courses.map((course) => (
             <Link
               key={course.id}
               href={`/courses/${course.id}`}
-              className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+              className="group bg-white rounded-2xl overflow-hidden card-hover shadow-sm"
             >
-              <PlaceholderImage
-                text={course.title}
-                className="group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="p-5">
-                <h3 className="font-heading text-lg font-semibold text-dark mb-2 group-hover:text-primary transition-colors">
-                  {course.title}
-                </h3>
-                <p className="text-sm text-gray-600 line-clamp-2">
-                  {course.shortDescription}
-                </p>
-                <div className="mt-4 flex items-center gap-2 text-xs text-gray-500">
-                  <span className="px-2 py-1 bg-warm-gray rounded">
+              <div className="overflow-hidden">
+                <PlaceholderImage
+                  text={course.title}
+                  className="group-hover:scale-105 transition-transform duration-500 !rounded-none"
+                />
+              </div>
+              <div className="p-6">
+                <div className="flex items-center gap-2 mb-3">
+                  <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
                     {course.ageGroup} yrs
                   </span>
-                  <span className="px-2 py-1 bg-warm-gray rounded">
+                  <span className="px-3 py-1 bg-secondary/10 text-secondary text-xs font-medium rounded-full">
                     {course.duration}
                   </span>
+                </div>
+                <h3 className="font-heading text-xl font-semibold text-dark mb-2 group-hover:text-primary transition-colors">
+                  {course.title}
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed line-clamp-2">
+                  {course.shortDescription}
+                </p>
+                <div className="mt-4 flex items-center text-primary font-medium text-sm">
+                  Learn more
+                  <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </div>
               </div>
             </Link>
           ))}
         </div>
-        <div className="text-center mt-10">
+
+        <div className="text-center mt-12">
           <Link
             href="/courses"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary-dark transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary text-white font-semibold rounded-lg hover:bg-primary-dark transition-colors shadow-lg shadow-primary/20"
           >
             View All Courses
           </Link>
@@ -172,43 +212,47 @@ function GalleryPreview() {
   const preview = galleryItems.slice(0, 8);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-14">
+        <div className="text-center mb-16">
+          <div className="section-divider" />
           <h2 className="text-3xl sm:text-4xl font-heading font-bold text-primary mb-4">
             Our Gallery
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A glimpse of the beautiful artwork created by our faculty and
-            students
+            A glimpse of the beautiful artwork created by our faculty and students
           </p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {preview.map((item) => (
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {preview.map((item, index) => (
             <div
               key={item.id}
-              className="group relative overflow-hidden rounded-lg cursor-pointer"
+              className={`group relative overflow-hidden rounded-xl cursor-pointer ${
+                index === 0 || index === 5 ? "md:col-span-2 md:row-span-2" : ""
+              }`}
             >
               <PlaceholderImage
                 text={item.title}
-                aspect="square"
-                className="group-hover:scale-110 transition-transform duration-500"
+                aspect={index === 0 || index === 5 ? "square" : "square"}
+                className="group-hover:scale-110 transition-transform duration-700 !rounded-none"
               />
-              <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/50 transition-colors flex items-end">
-                <p className="text-white text-sm font-medium p-3 translate-y-full group-hover:translate-y-0 transition-transform">
+              <div className="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                <p className="text-white text-sm font-medium p-4">
                   {item.title}
                 </p>
               </div>
             </div>
           ))}
         </div>
-        <div className="text-center mt-10">
+
+        <div className="text-center mt-12">
           <Link
             href="/gallery"
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors"
+            className="link-underline inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors"
           >
             View Full Gallery
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </Link>
@@ -218,61 +262,18 @@ function GalleryPreview() {
   );
 }
 
-function TestimonialsSection() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    return () => clearInterval(timer);
-  }, []);
-
-  const t = testimonials[current];
-
-  return (
-    <section className="py-20 bg-secondary text-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-12">
-          What Our Students Say
-        </h2>
-        <div className="min-h-[200px] flex flex-col items-center justify-center">
-          <svg className="w-10 h-10 text-accent mb-6 opacity-60" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z" />
-          </svg>
-          <blockquote className="text-xl sm:text-2xl font-heading leading-relaxed mb-6 italic">
-            &ldquo;{t.quote}&rdquo;
-          </blockquote>
-          <div>
-            <p className="font-semibold text-accent">{t.name}</p>
-            <p className="text-white/70 text-sm">{t.course}</p>
-          </div>
-        </div>
-        <div className="flex justify-center gap-2 mt-8">
-          {testimonials.map((_, i) => (
-            <button
-              key={i}
-              onClick={() => setCurrent(i)}
-              className={`w-2.5 h-2.5 rounded-full transition-all ${
-                i === current ? "bg-accent w-6" : "bg-white/30 hover:bg-white/50"
-              }`}
-              aria-label={`Testimonial ${i + 1}`}
-            />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function CTASection() {
   return (
-    <section className="py-20 bg-cream">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-primary mb-6">
+    <section className="py-24 bg-primary relative overflow-hidden">
+      {/* Decorative circles */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+      <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl sm:text-4xl font-heading font-bold text-white mb-6">
           Ready to Begin Your Artistic Journey?
         </h2>
-        <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+        <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed">
           Join our community of passionate artists. Book a free trial class
           today and discover the artist within you.
         </p>
@@ -280,13 +281,13 @@ function CTASection() {
           <Link
             href={`https://wa.me/${siteConfig.whatsapp}?text=${encodeURIComponent("Hi, I'd like to enroll in a course at Chithiram Art School!")}`}
             target="_blank"
-            className="px-8 py-3 bg-primary text-white font-semibold rounded-md hover:bg-primary-dark transition-colors text-lg"
+            className="px-8 py-3.5 bg-secondary text-white font-semibold rounded-lg hover:bg-secondary-light transition-colors text-base shadow-lg shadow-black/20"
           >
             Enroll Now
           </Link>
           <Link
             href="/contact"
-            className="px-8 py-3 border-2 border-primary text-primary font-semibold rounded-md hover:bg-primary hover:text-white transition-colors text-lg"
+            className="px-8 py-3.5 border-2 border-white/40 text-white font-semibold rounded-lg hover:bg-white hover:text-primary transition-colors text-base"
           >
             Contact Us
           </Link>

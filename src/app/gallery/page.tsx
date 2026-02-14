@@ -36,29 +36,31 @@ export default function GalleryPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-primary py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="bg-primary relative overflow-hidden py-24">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="section-divider !bg-secondary" />
           <h1 className="text-4xl sm:text-5xl font-heading font-bold text-white mb-4">
             Gallery
           </h1>
-          <p className="text-white/80 text-lg max-w-2xl mx-auto">
+          <p className="text-white/75 text-lg max-w-2xl mx-auto">
             Explore artwork created by our talented faculty and students
           </p>
         </div>
       </section>
 
       {/* Filters */}
-      <section className="py-8 bg-white border-b border-gray-100">
+      <section className="py-8 bg-white border-b border-gray-100 sticky top-[76px] z-40 backdrop-blur-md bg-white/95">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap gap-2 justify-center">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setActiveFilter(cat.id)}
-                className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
+                className={`px-6 py-2.5 rounded-full text-sm font-medium transition-all ${
                   activeFilter === cat.id
-                    ? "bg-primary text-white"
-                    : "bg-warm-gray text-dark hover:bg-gray-200"
+                    ? "bg-primary text-white shadow-sm"
+                    : "bg-warm-gray text-dark/70 hover:bg-gray-200"
                 }`}
               >
                 {cat.label}
@@ -69,26 +71,26 @@ export default function GalleryPage() {
       </section>
 
       {/* Gallery Grid */}
-      <section className="py-12 bg-cream">
+      <section className="py-16 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {filtered.map((item) => (
               <button
                 key={item.id}
                 onClick={() => openLightbox(item.id)}
-                className="group relative overflow-hidden rounded-lg text-left"
+                className="group relative overflow-hidden rounded-xl text-left card-hover"
               >
                 <PlaceholderImage
                   text={item.title}
                   aspect="square"
-                  className="group-hover:scale-110 transition-transform duration-500"
+                  className="group-hover:scale-110 transition-transform duration-700 !rounded-none"
                 />
-                <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/50 transition-colors flex items-end">
-                  <div className="p-3 translate-y-full group-hover:translate-y-0 transition-transform">
+                <div className="absolute inset-0 bg-gradient-to-t from-dark/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                  <div className="p-4">
                     <p className="text-white text-sm font-medium">
                       {item.title}
                     </p>
-                    <p className="text-white/70 text-xs capitalize">
+                    <p className="text-white/60 text-xs capitalize">
                       {item.category}
                     </p>
                   </div>
@@ -98,7 +100,7 @@ export default function GalleryPage() {
           </div>
 
           {filtered.length === 0 && (
-            <p className="text-center text-gray-500 py-12">
+            <p className="text-center text-gray-500 py-16">
               No items found in this category.
             </p>
           )}
@@ -108,12 +110,12 @@ export default function GalleryPage() {
       {/* Lightbox */}
       {lightboxItem !== null && (
         <div
-          className="fixed inset-0 z-[60] bg-dark/90 flex items-center justify-center"
+          className="fixed inset-0 z-[60] bg-dark/95 flex items-center justify-center backdrop-blur-sm"
           onClick={closeLightbox}
         >
           <button
             onClick={closeLightbox}
-            className="absolute top-6 right-6 text-white hover:text-accent"
+            className="absolute top-6 right-6 text-white/70 hover:text-white transition-colors"
             aria-label="Close"
           >
             <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -126,7 +128,7 @@ export default function GalleryPage() {
               e.stopPropagation();
               navigateLightbox("prev");
             }}
-            className="absolute left-4 text-white hover:text-accent"
+            className="absolute left-4 text-white/50 hover:text-white transition-colors"
             aria-label="Previous"
           >
             <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -142,7 +144,7 @@ export default function GalleryPage() {
               text={
                 filtered.find((item) => item.id === lightboxItem)?.title || ""
               }
-              className="!aspect-auto min-h-[50vh] shadow-2xl"
+              className="!aspect-auto min-h-[50vh] shadow-2xl rounded-xl"
             />
             <p className="text-white text-center mt-4 font-heading text-lg">
               {filtered.find((item) => item.id === lightboxItem)?.title}
@@ -154,7 +156,7 @@ export default function GalleryPage() {
               e.stopPropagation();
               navigateLightbox("next");
             }}
-            className="absolute right-4 text-white hover:text-accent"
+            className="absolute right-4 text-white/50 hover:text-white transition-colors"
             aria-label="Next"
           >
             <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
