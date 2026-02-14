@@ -170,7 +170,7 @@ export default function ContactPage() {
           </div>
           <div className="rounded-2xl overflow-hidden h-[400px]">
             <iframe
-              src="https://www.google.com/maps?q=14+Lilly+Pond+Street+Akkarai+Chennai+600119&output=embed"
+              src="https://maps.google.com/maps?q=14+Lilly+Pond+Street+Akkarai+Chennai+600119&t=&z=15&ie=UTF8&iwloc=B&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}
