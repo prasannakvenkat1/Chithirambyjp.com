@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/data/content";
 
 export default function Footer() {
@@ -8,6 +9,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
+            <Image
+              src="/images/chithirambyjplogo.png"
+              alt={siteConfig.name}
+              width={64}
+              height={64}
+              className="w-16 h-16 object-contain mb-3"
+            />
             <h3 className="font-heading text-2xl font-bold text-accent mb-4">
               {siteConfig.name}
             </h3>

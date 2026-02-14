@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/data/content";
 
 const navLinks = [
@@ -31,9 +32,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-              <span className="text-white font-heading text-xl font-bold">C</span>
-            </div>
+            <Image
+              src="/images/chithirambyjplogo.png"
+              alt={siteConfig.name}
+              width={56}
+              height={56}
+              className="w-14 h-14 object-contain"
+              priority
+            />
             <div>
               <span className="text-xl font-heading font-bold text-primary">
                 {siteConfig.name}
