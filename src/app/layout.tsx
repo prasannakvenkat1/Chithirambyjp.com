@@ -87,7 +87,6 @@ const jsonLd = {
   sameAs: [
     "https://facebook.com/chithirambyjp",
     "https://instagram.com/chithirambyjp",
-    "https://youtube.com/@chithirambyjp",
   ],
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",

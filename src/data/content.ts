@@ -11,8 +11,7 @@ export const siteConfig = {
   socialLinks: {
     facebook: "https://facebook.com/chithirambyjp",
     instagram: "https://instagram.com/chithirambyjp",
-    youtube: "https://youtube.com/@chithirambyjp",
-    linkedin: "https://linkedin.com/company/chithirambyjp",
+    google: "https://g.page/chithirambyjp",
   },
 };
 
@@ -49,7 +48,7 @@ export const courses = [
     description:
       "Art Trail is our specially designed children's art program that nurtures creativity, builds confidence, and develops fine motor skills through fun, age-appropriate art activities.",
     image: "/images/courses/art-trail.jpg",
-    duration: "Ongoing (monthly enrollment)",
+    duration: "Ongoing",
     levels: [],
     ageGroup: "",
     curriculum: [
