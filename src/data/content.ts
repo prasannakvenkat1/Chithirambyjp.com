@@ -147,7 +147,7 @@ export const faculty = [
     role: "Founder & Lead Artist",
     specialization: "Fine Arts, Oil Painting",
     bio: "With over 20 years of experience in fine arts and art education, JP founded Chithiram to make quality art education accessible to all. A graduate of the Government College of Fine Arts, JP has exhibited works across India and internationally.",
-    image: "/images/faculty/faculty-1.jpg",
+    image: "/images/founder.jpeg",
   },
   
 ];

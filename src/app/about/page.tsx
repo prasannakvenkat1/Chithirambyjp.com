@@ -166,9 +166,12 @@ export default function AboutPage() {
                 key={member.id}
                 className="bg-cream rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
               >
-                <PlaceholderImage
-                  text={member.name}
-                  aspect="square"
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  width={400}
+                  height={400}
+                  className="w-full aspect-square object-cover"
                 />
                 <div className="p-5">
                   <h3 className="font-heading text-lg font-semibold text-dark">
