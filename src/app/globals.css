@@ -23,6 +23,8 @@ body {
   font-family: var(--font-body);
   color: var(--color-dark);
   background-color: var(--color-cream);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23C53D43' stroke-width='0.5' opacity='0.06'%3E%3Ccircle cx='60' cy='60' r='20'/%3E%3Ccircle cx='60' cy='60' r='10'/%3E%3Ccircle cx='60' cy='60' r='3'/%3E%3Ccircle cx='60' cy='40' r='3'/%3E%3Ccircle cx='60' cy='80' r='3'/%3E%3Ccircle cx='40' cy='60' r='3'/%3E%3Ccircle cx='80' cy='60' r='3'/%3E%3Cline x1='60' y1='37' x2='60' y2='43'/%3E%3Cline x1='60' y1='77' x2='60' y2='83'/%3E%3Cline x1='37' y1='60' x2='43' y2='60'/%3E%3Cline x1='77' y1='60' x2='83' y2='60'/%3E%3Cpath d='M60 40 Q74 46 80 60 Q74 74 60 80 Q46 74 40 60 Q46 46 60 40Z'/%3E%3Cline x1='46' y1='46' x2='54' y2='54'/%3E%3Cline x1='74' y1='46' x2='66' y2='54'/%3E%3Cline x1='46' y1='74' x2='54' y2='66'/%3E%3Cline x1='74' y1='74' x2='66' y2='66'/%3E%3Ccircle cx='46' cy='46' r='2'/%3E%3Ccircle cx='74' cy='46' r='2'/%3E%3Ccircle cx='46' cy='74' r='2'/%3E%3Ccircle cx='74' cy='74' r='2'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
 }
 
 h1, h2, h3, h4, h5, h6 {
