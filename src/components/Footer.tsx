@@ -75,7 +75,6 @@ export default function Footer() {
               {[
                 "Art Trail (Kids)",
                 "Storytelling",
-                "Terracotta Jewelry",
               ].map((course) => (
                 <li key={course}>
                   <Link

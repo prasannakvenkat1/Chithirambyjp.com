@@ -83,27 +83,6 @@ export const courses = [
       "Storytelling for Everyday Life",
     ],
   },
-  {
-    id: "terracotta-jewelry",
-    title: "Terracotta Jewelry",
-    shortDescription:
-      "Create beautiful handcrafted jewelry pieces using terracotta clay and traditional techniques.",
-    description:
-      "Learn the art of creating stunning terracotta jewelry — from earrings and necklaces to bangles and pendants. This course covers clay preparation, shaping, baking, painting, and finishing techniques to create wearable art.",
-    image: "/images/courses/terracotta-jewelry.jpg",
-    duration: "1 - 3 months",
-    levels: ["Beginner", "Intermediate"],
-    ageGroup: "14+",
-    curriculum: [
-      "Clay Preparation & Conditioning",
-      "Basic Shapes & Forms",
-      "Earring & Pendant Design",
-      "Necklace & Bangle Making",
-      "Baking & Curing Techniques",
-      "Painting & Decorating",
-      "Sealing & Finishing",
-    ],
-  },
 ];
 
 export const projects = [
