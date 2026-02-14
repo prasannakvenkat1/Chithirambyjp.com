@@ -61,8 +61,6 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               {[
-                "Fine Arts",
-                "Sculpting",
                 "Tanjore Painting",
                 "Terracotta Jewelry",
                 "Art Cubs (Kids)",

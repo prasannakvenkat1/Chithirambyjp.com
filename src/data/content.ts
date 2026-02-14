@@ -41,50 +41,6 @@ export const heroBanners = [
 
 export const courses = [
   {
-    id: "fine-arts",
-    title: "Fine Arts",
-    shortDescription:
-      "Master drawing, painting, and composition through structured professional and certificate programs.",
-    description:
-      "Our Fine Arts program offers comprehensive training in drawing, painting, color theory, and composition. Whether you are a beginner or looking to refine your skills, our structured curriculum guides you from fundamentals to advanced techniques. Available in both Professional and Certificate levels.",
-    image: "/images/courses/fine-arts.jpg",
-    duration: "6 months - 2 years",
-    levels: ["Certificate", "Professional"],
-    ageGroup: "12+",
-    curriculum: [
-      "Fundamentals of Drawing & Sketching",
-      "Color Theory & Mixing",
-      "Oil Painting Techniques",
-      "Watercolor Mastery",
-      "Acrylic Painting",
-      "Composition & Perspective",
-      "Portrait & Figure Drawing",
-      "Landscape Painting",
-    ],
-  },
-  {
-    id: "sculpting",
-    title: "Sculpting",
-    shortDescription:
-      "Explore three-dimensional art through stone, wood, metal, and mixed media sculpting techniques.",
-    description:
-      "Dive into the world of three-dimensional art with our sculpting program. Learn to work with diverse materials including stone, wood, metal, clay, and mixed media. Our expert instructors guide you through traditional and contemporary sculpting techniques.",
-    image: "/images/courses/sculpting.jpg",
-    duration: "3 months - 1 year",
-    levels: ["Beginner", "Intermediate", "Advanced"],
-    ageGroup: "14+",
-    curriculum: [
-      "Introduction to 3D Form",
-      "Clay Modeling Fundamentals",
-      "Stone Carving Techniques",
-      "Wood Sculpting",
-      "Metal Sculpting & Welding",
-      "Mixed Media Sculpture",
-      "Mold Making & Casting",
-      "Public Art & Installation",
-    ],
-  },
-  {
     id: "tanjore-painting",
     title: "Tanjore Painting",
     shortDescription:
