@@ -69,9 +69,9 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               {[
-                "Tanjore Painting",
+                "Art Trail (Kids)",
+                "Storytelling",
                 "Terracotta Jewelry",
-                "Art Cubs (Kids)",
               ].map((course) => (
                 <li key={course}>
                   <Link

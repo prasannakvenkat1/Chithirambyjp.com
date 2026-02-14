@@ -41,24 +41,46 @@ export const heroBanners = [
 
 export const courses = [
   {
-    id: "tanjore-painting",
-    title: "Tanjore Painting",
+    id: "art-trail",
+    title: "Art Trail",
     shortDescription:
-      "Learn the ancient South Indian art of Tanjore painting with gold foil, semi-precious stones, and rich colors.",
+      "Fun and creative art programs designed specifically for children, fostering imagination and skill development.",
     description:
-      "Tanjore Painting is a classical South Indian art form known for its rich colors, surface richness, and compact composition. Learn to create stunning works using gold foil, semi-precious stones, and traditional techniques passed down through generations.",
-    image: "/images/courses/tanjore-painting.jpg",
-    duration: "3 - 6 months",
-    levels: ["Beginner", "Advanced"],
-    ageGroup: "16+",
+      "Art Trail is our specially designed children's art program that nurtures creativity, builds confidence, and develops fine motor skills through fun, age-appropriate art activities. Classes are grouped by age to ensure the best learning experience.",
+    image: "/images/courses/art-trail.jpg",
+    duration: "Ongoing (monthly enrollment)",
+    levels: ["Ages 4-6", "Ages 7-9", "Ages 10-12"],
+    ageGroup: "4-12",
     curriculum: [
-      "History & Tradition of Tanjore Art",
-      "Board Preparation & Base Work",
-      "Iconography & Design",
-      "Gold Foil Application",
-      "Stone & Bead Embellishment",
-      "Color Mixing & Application",
-      "Finishing & Framing",
+      "Drawing & Coloring Fun",
+      "Paper Crafts & Origami",
+      "Clay Modeling for Kids",
+      "Painting Adventures",
+      "Mixed Media Projects",
+      "Art History Stories",
+      "Group Art Projects",
+    ],
+  },
+  {
+    id: "storytelling",
+    title: "Storytelling",
+    shortDescription:
+      "Engaging storytelling workshops for kids and adults — learn the art of crafting and narrating compelling stories.",
+    description:
+      "Our Storytelling program brings the timeless art of narrative to life for both children and adults. Kids develop imagination, vocabulary, and confidence through interactive story sessions, while adults explore creative writing, public speaking, and the craft of compelling narratives. Whether for personal expression or professional growth, storytelling is a powerful skill for all ages.",
+    image: "/images/courses/storytelling.jpg",
+    duration: "1 - 3 months",
+    levels: ["Kids (Ages 5-12)", "Teens & Adults"],
+    ageGroup: "5+",
+    curriculum: [
+      "Elements of a Great Story",
+      "Character Building & World Creation",
+      "Voice Modulation & Expression",
+      "Interactive & Improvisational Storytelling",
+      "Visual Storytelling & Illustration",
+      "Writing Your Own Stories",
+      "Public Speaking & Stage Presence",
+      "Storytelling for Everyday Life",
     ],
   },
   {
@@ -80,27 +102,6 @@ export const courses = [
       "Baking & Curing Techniques",
       "Painting & Decorating",
       "Sealing & Finishing",
-    ],
-  },
-  {
-    id: "art-cubs",
-    title: "Art Cubs",
-    shortDescription:
-      "Fun and creative art programs designed specifically for children, fostering imagination and skill development.",
-    description:
-      "Art Cubs is our specially designed children's art program that nurtures creativity, builds confidence, and develops fine motor skills through fun, age-appropriate art activities. Classes are grouped by age to ensure the best learning experience.",
-    image: "/images/courses/art-cubs.jpg",
-    duration: "Ongoing (monthly enrollment)",
-    levels: ["Ages 4-6", "Ages 7-9", "Ages 10-12"],
-    ageGroup: "4-12",
-    curriculum: [
-      "Drawing & Coloring Fun",
-      "Paper Crafts & Origami",
-      "Clay Modeling for Kids",
-      "Painting Adventures",
-      "Mixed Media Projects",
-      "Art History Stories",
-      "Group Art Projects",
     ],
   },
 ];
