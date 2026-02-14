@@ -50,6 +50,7 @@ export default function Footer() {
               {[
                 { href: "/about", label: "About Us" },
                 { href: "/courses", label: "Courses" },
+                { href: "/projects", label: "Projects" },
                 { href: "/gallery", label: "Gallery" },
                 { href: "/contact", label: "Contact" },
               ].map((link) => (

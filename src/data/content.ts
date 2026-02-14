@@ -106,6 +106,17 @@ export const courses = [
   },
 ];
 
+export const projects = [
+  {
+    id: "tanjore-art",
+    title: "Tanjore Art",
+    description:
+      "Tanjore painting is a classical South Indian art form that originated in the town of Thanjavur. Known for its rich colours, surface richness, and compact composition, Tanjore paintings are a beautiful blend of art and devotion. We undertake Tanjore art projects and custom orders — from traditional deity paintings to contemporary interpretations.",
+    image: "/images/projects/tanjore-art.jpg",
+    note: "Tanjore art work / projects are undertaken. Contact us for custom orders and commissioned pieces.",
+  },
+];
+
 export const galleryItems = [
   // Faculty Works
   { id: 1, image: "/images/gallery/pencil-drawing.jpg", title: "Pencil Drawing", category: "faculty" },
