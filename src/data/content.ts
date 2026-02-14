@@ -107,18 +107,26 @@ export const courses = [
 ];
 
 export const galleryItems = [
-  { id: 1, image: "/images/gallery/gallery-1.jpg", title: "Oil Painting - Landscape", category: "faculty" },
-  { id: 2, image: "/images/gallery/gallery-2.jpg", title: "Tanjore Painting - Krishna", category: "faculty" },
-  { id: 3, image: "/images/gallery/gallery-3.jpg", title: "Stone Sculpture", category: "faculty" },
-  { id: 4, image: "/images/gallery/gallery-4.jpg", title: "Student Watercolor Work", category: "student" },
-  { id: 5, image: "/images/gallery/gallery-5.jpg", title: "Terracotta Jewelry Collection", category: "student" },
-  { id: 6, image: "/images/gallery/gallery-6.jpg", title: "Art Exhibition 2024", category: "event" },
-  { id: 7, image: "/images/gallery/gallery-7.jpg", title: "Charcoal Portrait", category: "student" },
-  { id: 8, image: "/images/gallery/gallery-8.jpg", title: "Mixed Media Installation", category: "faculty" },
-  { id: 9, image: "/images/gallery/gallery-9.jpg", title: "Annual Day Celebration", category: "event" },
-  { id: 10, image: "/images/gallery/gallery-10.jpg", title: "Acrylic Abstract", category: "student" },
-  { id: 11, image: "/images/gallery/gallery-11.jpg", title: "Wood Sculpture", category: "faculty" },
-  { id: 12, image: "/images/gallery/gallery-12.jpg", title: "Children's Art Camp", category: "event" },
+  // Faculty Works
+  { id: 1, image: "/images/gallery/pencil-drawing.jpg", title: "Pencil Drawing", category: "faculty" },
+  { id: 2, image: "/images/gallery/pencil-sketching.jpg", title: "Pencil Sketching", category: "faculty" },
+  { id: 3, image: "/images/gallery/pencil-shading.jpg", title: "Pencil Shading", category: "faculty" },
+  { id: 4, image: "/images/gallery/colour-pencils.jpg", title: "Colour Pencils", category: "faculty" },
+  { id: 5, image: "/images/gallery/crayons.jpg", title: "Crayons", category: "faculty" },
+  { id: 6, image: "/images/gallery/oil-pastels.jpg", title: "Oil Pastels", category: "faculty" },
+  { id: 7, image: "/images/gallery/poster-colours.jpg", title: "Poster Colours", category: "faculty" },
+  { id: 8, image: "/images/gallery/water-colours.jpg", title: "Water Colours", category: "faculty" },
+  { id: 9, image: "/images/gallery/acrylic-colours.jpg", title: "Acrylic Colours", category: "faculty" },
+  { id: 10, image: "/images/gallery/oil-painting.jpg", title: "Oil Painting", category: "faculty" },
+  // Student Works
+  { id: 11, image: "/images/gallery/student-watercolor.jpg", title: "Student Watercolor Work", category: "student" },
+  { id: 12, image: "/images/gallery/terracotta-jewelry.jpg", title: "Terracotta Jewelry Collection", category: "student" },
+  { id: 13, image: "/images/gallery/student-sketching.jpg", title: "Student Pencil Sketch", category: "student" },
+  { id: 14, image: "/images/gallery/student-acrylic.jpg", title: "Student Acrylic Painting", category: "student" },
+  // Events
+  { id: 15, image: "/images/gallery/art-exhibition.jpg", title: "Art Exhibition 2024", category: "event" },
+  { id: 16, image: "/images/gallery/annual-day.jpg", title: "Annual Day Celebration", category: "event" },
+  { id: 17, image: "/images/gallery/art-camp.jpg", title: "Children's Art Camp", category: "event" },
 ];
 
 export const testimonials = [
