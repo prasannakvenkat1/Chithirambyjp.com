@@ -118,15 +118,14 @@ export const galleryItems = [
   { id: 8, image: "/images/gallery/water-colours.jpg", title: "Water Colours", category: "faculty" },
   { id: 9, image: "/images/gallery/acrylic-colours.jpg", title: "Acrylic Colours", category: "faculty" },
   { id: 10, image: "/images/gallery/oil-painting.jpg", title: "Oil Painting", category: "faculty" },
+  { id: 11, image: "/images/gallery/tanjore-painting.jpg", title: "Tanjore Painting - Orders Undertaken", category: "faculty" },
   // Student Works
-  { id: 11, image: "/images/gallery/student-watercolor.jpg", title: "Student Watercolor Work", category: "student" },
-  { id: 12, image: "/images/gallery/terracotta-jewelry.jpg", title: "Terracotta Jewelry Collection", category: "student" },
-  { id: 13, image: "/images/gallery/student-sketching.jpg", title: "Student Pencil Sketch", category: "student" },
-  { id: 14, image: "/images/gallery/student-acrylic.jpg", title: "Student Acrylic Painting", category: "student" },
+  { id: 12, image: "/images/gallery/student-watercolor.jpg", title: "Student Watercolor Work", category: "student" },
+  { id: 13, image: "/images/gallery/terracotta-jewelry.jpg", title: "Terracotta Jewelry Collection", category: "student" },
+  { id: 14, image: "/images/gallery/student-sketching.jpg", title: "Student Pencil Sketch", category: "student" },
+  { id: 15, image: "/images/gallery/student-acrylic.jpg", title: "Student Acrylic Painting", category: "student" },
   // Events
-  { id: 15, image: "/images/gallery/art-exhibition.jpg", title: "Art Exhibition 2024", category: "event" },
-  { id: 16, image: "/images/gallery/annual-day.jpg", title: "Annual Day Celebration", category: "event" },
-  { id: 17, image: "/images/gallery/art-camp.jpg", title: "Children's Art Camp", category: "event" },
+  { id: 16, image: "/images/gallery/art-camp.jpg", title: "Children's Art Camp", category: "event" },
 ];
 
 export const testimonials = [
