@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { faculty, siteConfig } from "@/data/content";
 import PlaceholderImage from "@/components/PlaceholderImage";
 
@@ -59,10 +60,12 @@ export default function AboutPage() {
       <section id="founder" className="py-20 bg-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <PlaceholderImage
-              text="JP - Founder"
-              aspect="portrait"
-              className="shadow-lg max-w-md mx-auto lg:mx-0"
+            <Image
+              src="/images/founder.jpeg"
+              alt="JP - JayaPriya, Founder of Chithiram Art School"
+              width={400}
+              height={533}
+              className="rounded-lg shadow-lg max-w-md mx-auto lg:mx-0 w-full h-auto object-cover"
             />
             <div>
               <h2 className="text-3xl font-heading font-bold text-primary mb-6">
